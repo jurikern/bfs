@@ -4,13 +4,23 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Vertex {
+  private String filepath;
   private String checksum;
   private boolean visited;
   private List<Vertex> neighbourList;
 
-  public Vertex (String checksum) {
+  public Vertex (String filepath, String checksum) {
     this.checksum = checksum;
+    this.filepath = filepath;
     this.neighbourList = new ArrayList<Vertex>();
+  }
+
+  public String getFilepath () {
+    return filepath;
+  }
+
+  public void setFilepath (String filepath) {
+    this.filepath = filepath;
   }
 
   public String getChecksum () {
